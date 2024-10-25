@@ -27,6 +27,9 @@ const Navbar = () => {
                     <li className='mx-4 my-5'>
                         <NavLink to ="/news">Nyheder</NavLink>
                     </li>
+                    <li className='mx-4 my-5'>
+                        <NavLink to ="/posts">vis Posts</NavLink>
+                    </li>
                     <li className='mx-4 my-5 bg-tahiti-dark'>
                         <NavLink to ="/contact">Kontakt os</NavLink>
                     </li>

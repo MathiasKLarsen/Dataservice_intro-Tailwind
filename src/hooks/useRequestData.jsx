@@ -23,11 +23,14 @@ const useRequestData = () => {
 
         setIsLoading(true)// der loads = vener på data/svar
 
+        await new Promise(resolve => setTimeout(resolve, 1500))// 1.5 sekunder forsinkelse
+
         try {
 
             response = await axios.get(url)
 
             setData(response.data)
+            setError(false)
 
         } catch (error) {
 

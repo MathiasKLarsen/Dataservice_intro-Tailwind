@@ -8,6 +8,8 @@ import Page404 from "./pages/Page404"
 import Layout from "./layout/Layout"
 
 import './App.css'
+import Posts from './pages/JSONplaceholder/Posts'
+import PostDetails from "./pages/JSONplaceholder/PostDetails"
 
 function App() {
 
@@ -26,6 +28,12 @@ function App() {
           },
           {
             path: "/contact", element: <Contact />
+          },
+          {
+            path: "/posts", element: <Posts />
+          },
+          {
+            path: "/postdetails/:id", element: <PostDetails />
           },
           {
             path: "*", element: <Page404 />
