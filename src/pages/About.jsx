@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="container">
         <Title titleText="Om Firmaet" textColor='red' />
-        <img width= "400px" src={smøg} alt="ung gut der ryger en smøg, med solbriller på" />
+        {/* <img width= "400px" src={smøg} alt="ung gut der ryger en smøg, med solbriller på" /> */}
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Laudantium ducimus ratione, repudiandae porro, excepturi provident, 

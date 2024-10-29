@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className='relative text-white bg-emerald-600'>
         <div className='container'>
             <div className="flex items-center justify-between py-4">
-                <div>DataService A/S</div> 
+                <div className='px-2'>DataService A/S</div> 
 
                 <button onClick={() => setShowMenu( !showMenu )}  className='mr-2 md:hidden'>
                 <RxHamburgerMenu size="2rem"/>
@@ -30,7 +30,13 @@ const Navbar = () => {
                     <li className='mx-4 my-5'>
                         <NavLink to ="/posts">vis Posts</NavLink>
                     </li>
-                    <li className='mx-4 my-5 bg-tahiti-dark'>
+                    <li className='mx-4 my-5'>
+                        <NavLink to ="/photos">se Billeder</NavLink>
+                    </li>
+                    <li className='mx-4 my-5'>
+                        <NavLink to ="/todos">todos</NavLink>
+                    </li>
+                    <li className='mx-4 my-5'>
                         <NavLink to ="/contact">Kontakt os</NavLink>
                     </li>
                 </menu>
