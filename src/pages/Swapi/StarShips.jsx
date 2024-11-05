@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Title from "../../components/Title";
 import Loader from "../../components/Loader";
 import Error from "../../components/Error";
+import Pilot from './Pilot';
 
 import useRequestData from "../../Hooks/useRequestData";
 
@@ -73,8 +74,9 @@ const Starships = () => {
                                 </div>
                                 <div className='p-5 border-2 border-black'>
                                     <p>Starship class: {starship.starship_class}</p>
-                                    <p>Created: {starship.created}</p>
-                                    <p>Edited: {starship.edited}</p>
+                                    <p>Created: { new Date (starship.created).toLocaleDateString() }</p>
+                                    <p>Edited: { new Date (starship.edited).toLocaleDateString() }</p>
+                                    <p>Pilots: { starship.pilots.map ( p=> <Pilot url={p} key={starship.name + p } />)}</p>
                                 </div>
                             </li>
                         </ul>

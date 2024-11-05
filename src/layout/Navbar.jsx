@@ -49,6 +49,36 @@ const Navbar = () => {
                             </li>
                         </menu>
                     </li>
+                    <li className='relative mx-4 my-5 group'>
+                        NewsAPI ↴
+                        <menu className='w-auto md:hidden md:group-hover:block md:group-hover:absolute md:bg-tahiti-dark whitespace-nowrap'>
+                            <li className='mx-4 my-5'>
+                                <NavLink to ="/headlines">HeadLines</NavLink>
+                            </li>
+                        </menu>
+                    </li>
+                    <li className='relative mx-4 my-5 group'>
+                        Weahter ↴
+                        <menu className='w-auto md:hidden md:group-hover:block md:group-hover:absolute md:bg-tahiti-dark whitespace-nowrap'>
+                            <li className='mx-4 my-5'>
+                                <NavLink to ="/openweather">Openweather</NavLink>
+                            </li>
+                            <li className='mx-4 my-5'>
+                                <NavLink to ="/openweather2">Openweather2</NavLink>
+                            </li>
+                            <li className='mx-4 my-5'>
+                                <NavLink to ="/openweather3">Openweather3</NavLink>
+                            </li>
+                        </menu>
+                    </li>
+                    <li className='relative mx-4 my-5 group'>
+                        RapidAPI ↴
+                        <menu className='w-auto md:hidden md:group-hover:block md:group-hover:absolute md:bg-tahiti-dark whitespace-nowrap'>
+                            <li className='mx-4 my-5'>
+                                <NavLink to ="/hobbies">Hobbies</NavLink>
+                            </li>
+                        </menu>
+                    </li>
                     <li className='mx-4 my-5'>
                         <NavLink to ="/contact">Kontakt os</NavLink>
                     </li>

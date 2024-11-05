@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
+// Default Navbar
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import News from "./pages/News"
@@ -7,13 +8,26 @@ import Home from "./pages/Home"
 import Page404 from "./pages/Page404"
 import Layout from "./layout/Layout"
 
+// Css
 import './App.css'
+
+// JSONPlaceholder API
 import Posts from './pages/JSONplaceholder/Posts'
 import PostDetails from "./pages/JSONplaceholder/PostDetails"
-
 import Photos from "./pages/JSONplaceholder/Photos"
 import Todos from "./pages/JSONplaceholder/Todos"
+
+// Swapi API
 import StarShips from "./pages/Swapi/StarShips"
+
+// NewsAPI
+import Headlines from "./pages/NewsAPI/Headlines"
+
+// Weather 
+import OpenWeather from "./pages/openWeather/OpenWeather"
+import OpenWeather2 from "./pages/openWeather/OpenWeather2"
+import OpenWeather3 from "./pages/openWeather/OpenWeather3"
+import Hobbies from "./pages/RapidAPI/Hobbies"
 
 function App() {
 
@@ -33,6 +47,7 @@ function App() {
           {
             path: "/contact", element: <Contact />
           },
+          // JsonPlaceHolder
           {
             path: "/posts", element: <Posts />
           },
@@ -45,9 +60,29 @@ function App() {
           {
             path: "/todos" , element: <Todos />
           },
+          // Swapi
           {
             path: "/starships" , element: <StarShips />
           },
+          // NewsApi
+          {
+            path: "/headlines" , element: <Headlines />
+          },
+          // OpenWeather
+          {
+            path: "/openweather" , element: <OpenWeather />
+          },
+          {
+            path: "/openweather2" , element: <OpenWeather2 />
+          },
+          {
+            path: "/openweather3" , element: <OpenWeather3 />
+          },
+          // RapidAPI
+          {
+            path: "/hobbies" , element: <Hobbies />
+          },
+          // Page not found
           {
             path: "*", element: <Page404 />
           }

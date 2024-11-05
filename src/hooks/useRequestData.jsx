@@ -17,7 +17,7 @@ const useRequestData = () => {
     const [error, setError] = useState(false)
 
     // function: ring op api'et - modtager en url (fx til swapi)
-    const makeRequest = async (url) => {
+    const makeRequest = async ( url, method = "GET", headers = null, params = null ) => {
         
         let response;
 
@@ -26,8 +26,13 @@ const useRequestData = () => {
         await new Promise(resolve => setTimeout(resolve, 1500))// 1.5 sekunder forsinkelse
 
         try {
+            if (method === "GET") {
 
-            response = await axios.get(url)
+                response = await axios.get( url, {headers: headers, params: params} )
+            }
+            else {
+                throw new Error("Forkert method - indtil videre er kun GET accepteret")
+            }
 
             setData(response.data)
             setError(false)
