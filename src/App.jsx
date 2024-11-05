@@ -21,6 +21,7 @@ import Todos from "./pages/JSONplaceholder/Todos"
 import StarShips from "./pages/Swapi/StarShips"
 
 // NewsAPI
+import Everything from "./pages/NewsAPI/Everything"
 import Headlines from "./pages/NewsAPI/Headlines"
 
 // Weather 
@@ -66,6 +67,8 @@ function App() {
           },
           // NewsApi
           {
+            path: "/everything" , element: <Everything />
+          },          {
             path: "/headlines" , element: <Headlines />
           },
           // OpenWeather

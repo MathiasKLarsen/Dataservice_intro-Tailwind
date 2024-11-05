@@ -53,6 +53,9 @@ const Navbar = () => {
                         NewsAPI ↴
                         <menu className='w-auto md:hidden md:group-hover:block md:group-hover:absolute md:bg-tahiti-dark whitespace-nowrap'>
                             <li className='mx-4 my-5'>
+                                <NavLink to ="/everything">Nyheder - Everything</NavLink>
+                            </li>
+                            <li className='mx-4 my-5'>
                                 <NavLink to ="/headlines">HeadLines</NavLink>
                             </li>
                         </menu>
