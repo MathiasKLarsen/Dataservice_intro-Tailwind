@@ -29,7 +29,7 @@ const Posts = () => {
       {/* h1 fra Title.jsx */}
      
       <Title
-        titleText="Posts fra JSONPlaceholder..."
+        titleText="💻Posts fra JSONPlaceholder... 💻"
       />
 
       <div>

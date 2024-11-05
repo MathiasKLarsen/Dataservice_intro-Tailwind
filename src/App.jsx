@@ -13,6 +13,7 @@ import PostDetails from "./pages/JSONplaceholder/PostDetails"
 
 import Photos from "./pages/JSONplaceholder/Photos"
 import Todos from "./pages/JSONplaceholder/Todos"
+import StarShips from "./pages/Swapi/StarShips"
 
 function App() {
 
@@ -36,13 +37,16 @@ function App() {
             path: "/posts", element: <Posts />
           },
           {
+            path: "/postdetails/:id", element: <PostDetails />
+          },
+          {
             path: "/photos", element: <Photos />
           },
           {
             path: "/todos" , element: <Todos />
           },
           {
-            path: "/postdetails/:id", element: <PostDetails />
+            path: "/starships" , element: <StarShips />
           },
           {
             path: "*", element: <Page404 />

@@ -6,7 +6,7 @@ const About = () => {
 
   return (
     <div className="container">
-        <Title titleText="Om Firmaet" textColor='red' />
+        <Title titleText="Om Firmaet 𝖜𝖔𝖒𝖕 𝖜𝖔𝖒𝖕" textColor='red' />
         {/* <img width= "400px" src={smøg} alt="ung gut der ryger en smøg, med solbriller på" /> */}
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
