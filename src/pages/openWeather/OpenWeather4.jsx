@@ -5,9 +5,11 @@ import Loader from '../../components/Loader'
 import Error from '../../components/Error'
 import Title from '../../components/Title'
 
+import LeafletMap from './LeafletMap'
+
 import useRequestData from '../../hooks/useRequestData'
 
-const OpenWeather3 = () => {
+const OpenWeather4 = () => {
 
   const {makeRequest, isLoading, data, error} = useRequestData()
   const [zip, setZip] = useState( "7300" )
@@ -30,7 +32,7 @@ const OpenWeather3 = () => {
   return (
       <section>
 
-          <Title titleText={"Vejret for dit postnummer 3"}/>
+          <Title titleText={"Vejret for dit postnummer 4"}/>
           { isLoading && <Loader/> }
           {error && <Error/>}
 
@@ -54,8 +56,10 @@ const OpenWeather3 = () => {
           {data && 
             <WeatherCard data={data}/>
           }
+
+          <LeafletMap />
       </section>
   )
 }
 
-export default OpenWeather3
+export default OpenWeather4

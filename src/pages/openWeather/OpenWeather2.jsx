@@ -23,7 +23,7 @@ const OpenWeather2 = () => {
   return (
       <section>
 
-          <Title titleText={"Vejret for dit postnummer"}/>
+          <Title titleText={"Vejret for dit postnummer 2"}/>
           { isLoading && <Loader/> }
           {error && <Error/>}
 

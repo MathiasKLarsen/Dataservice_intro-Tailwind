@@ -72,6 +72,9 @@ const Navbar = () => {
                             <li className='mx-4 my-5'>
                                 <NavLink to ="/openweather3">Openweather3</NavLink>
                             </li>
+                            <li className='mx-4 my-5'>
+                                <NavLink to ="/openweather4">Openweather4</NavLink>
+                            </li>
                         </menu>
                     </li>
                     <li className='relative mx-4 my-5 group'>

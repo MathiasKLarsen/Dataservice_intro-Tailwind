@@ -28,6 +28,7 @@ import Headlines from "./pages/NewsAPI/Headlines"
 import OpenWeather from "./pages/openWeather/OpenWeather"
 import OpenWeather2 from "./pages/openWeather/OpenWeather2"
 import OpenWeather3 from "./pages/openWeather/OpenWeather3"
+import OpenWeather4 from "./pages/openWeather/OpenWeather4"
 import Hobbies from "./pages/RapidAPI/Hobbies"
 
 function App() {
@@ -80,6 +81,9 @@ function App() {
           },
           {
             path: "/openweather3" , element: <OpenWeather3 />
+          },
+          {
+            path: "/openweather4" , element: <OpenWeather4 />
           },
           // RapidAPI
           {
