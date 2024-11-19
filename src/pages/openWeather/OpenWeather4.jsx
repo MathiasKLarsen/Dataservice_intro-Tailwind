@@ -33,7 +33,7 @@ const OpenWeather4 = () => {
       <section>
 
           <Title titleText={"Vejret for dit postnummer 4"}/>
-          { isLoading && <Loader/> }
+          {isLoading && <Loader/> }
           {error && <Error/>}
 
           <h2>Skriv et PostNummer: {zip}</h2>
@@ -53,13 +53,20 @@ const OpenWeather4 = () => {
              }
           </datalist>
 
-          {data && 
-            <WeatherCard data={data}/>
-          }
+          <div className='flex '>
+              {data &&
+                <>
+                    <WeatherCard data={data}/>
+              
+                    <LeafletMap lat={ data.coord.lat } lon={ data.coord.lon } zoom={10} />
+                </>
+              }
+          </div>
 
-          <LeafletMap />
       </section>
   )
 }
 
 export default OpenWeather4
+
+// 56.404, 10.887 - campus black koordinater
