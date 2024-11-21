@@ -85,6 +85,17 @@ const Navbar = () => {
                             </li>
                         </menu>
                     </li>
+                    <li className='relative mx-4 my-5 group'>
+                        PocketBase ↴
+                        <menu className='w-auto md:hidden md:group-hover:block md:group-hover:absolute md:bg-tahiti-dark whitespace-nowrap'>
+                            <li className='mx-4 my-5'>
+                                <NavLink to ="/gaming">gaming</NavLink>
+                            </li>
+                        </menu>
+                    </li>
+                    <li className='mx-4 my-5'>
+                        <NavLink to ="/admin">ADMIN</NavLink>
+                    </li>
                     <li className='mx-4 my-5'>
                         <NavLink to ="/contact">Kontakt os</NavLink>
                     </li>

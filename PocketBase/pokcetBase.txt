@@ -1,0 +1,13 @@
+PocketBase login:
+MAIL:
+    mala18@videndjurs.net
+
+PASSWORD: 
+    86FusdbEeDpM3wH
+
+
+
+PocketBase start in terminal
+
+    pocketbase.exe serve
+    ./pokcetbase.exe serve

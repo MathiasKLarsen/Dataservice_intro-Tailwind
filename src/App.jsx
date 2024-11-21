@@ -6,7 +6,10 @@ import Contact from "./pages/Contact"
 import News from "./pages/News"
 import Home from "./pages/Home"
 import Page404 from "./pages/Page404"
+
+// Layout filerne
 import Layout from "./layout/Layout"
+import AdminLayout from "./layout/AdminLayout"
 
 // Css
 import './App.css'
@@ -29,14 +32,25 @@ import OpenWeather from "./pages/openWeather/OpenWeather"
 import OpenWeather2 from "./pages/openWeather/OpenWeather2"
 import OpenWeather3 from "./pages/openWeather/OpenWeather3"
 import OpenWeather4 from "./pages/openWeather/OpenWeather4"
+
+// RapidAPI
 import Hobbies from "./pages/RapidAPI/Hobbies"
+
+// PocketBase
+import Gaming from "./pages/PocketBase/Gaming"
+
+// Admin
+import HomeAdmin from "./pages/ADMIN/HomeAdmin"
 
 function App() {
 
   const router = createBrowserRouter (
     [
       {
-        path: "/", element: <Layout />, children: [
+        path: "/", 
+        element: <Layout />, 
+        // errorElement: <PageNotFound />,
+        children: [
           {
             index: true, element: <Home />
           },
@@ -89,10 +103,23 @@ function App() {
           {
             path: "/hobbies" , element: <Hobbies />
           },
+          // RapidAPI
+          {
+            path: "/gaming" , element: <Gaming />
+          },
           // Page not found
           {
             path: "*", element: <Page404 />
           }
+        ]
+      },
+      {
+        path: "/admin", 
+        element: <AdminLayout />, 
+        // errorElement: <PageNotFound />,
+        // outlet filen
+        children: [
+          { element: <HomeAdmin /> }
         ]
       }
     ]
