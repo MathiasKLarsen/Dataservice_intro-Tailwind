@@ -12,7 +12,7 @@ const Gaming = () => {
 
     useEffect(() => {
  
-        makeRequest("http://127.0.0.1:8090/api/collections/gaming_categories_gaming_view/records");
+        makeRequest("http://127.0.0.1:8090/api/collections/gaming/records");
      
       }, [])
 

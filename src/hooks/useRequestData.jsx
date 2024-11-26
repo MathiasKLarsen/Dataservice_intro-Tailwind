@@ -17,7 +17,7 @@ const useRequestData = () => {
     const [error, setError] = useState(false)
 
     // function: ring op api'et - modtager en url (fx til swapi)
-    const makeRequest = async ( url, method = "GET", headers = null, params = null ) => {
+    const makeRequest = async ( url, method = "GET", headers = null, params = null, body = null ) => {
         
         let response;
 
@@ -29,6 +29,22 @@ const useRequestData = () => {
             if (method === "GET") {
 
                 response = await axios.get( url, {headers: headers, params: params} )
+            }
+            else if (method === "DELETE") {
+
+                response = await axios.delete( url, {headers: headers, params: params} )
+            }
+            else if (method === "POST") {
+
+                response = await axios.post( url, body, {headers: headers, params: params} )
+            }
+            else if (method === "PUT") {
+
+                response = await axios.put( url, body, {headers: headers, params: params} )
+            }
+            else if (method === "PATCH") {
+
+                response = await axios.patch( url, body, {headers: headers, params: params} )
             }
             else {
                 throw new Error("Forkert method - indtil videre er kun GET accepteret")

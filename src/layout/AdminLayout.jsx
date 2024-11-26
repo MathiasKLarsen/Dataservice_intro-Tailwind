@@ -3,14 +3,16 @@ import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
   return (
-    <section className='p-4'>
+    <section className='container px-4 mx-auto'>
+      <div className='flex'>
 
-      <AdminNavbar />
+        <AdminNavbar />
 
-      <main className='my-5'>
-          <Outlet />
-      </main>
+        <main className='container px-2 m-5'>
+            <Outlet />
+        </main>
 
+      </div>
     </section>
   )
 }

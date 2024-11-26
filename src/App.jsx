@@ -9,7 +9,6 @@ import Page404 from "./pages/Page404"
 
 // Layout filerne
 import Layout from "./layout/Layout"
-import AdminLayout from "./layout/AdminLayout"
 
 // Css
 import './App.css'
@@ -40,7 +39,9 @@ import Hobbies from "./pages/RapidAPI/Hobbies"
 import Gaming from "./pages/PocketBase/Gaming"
 
 // Admin
+import AdminLayout from "./layout/AdminLayout"
 import HomeAdmin from "./pages/ADMIN/HomeAdmin"
+import PBGamingAdmin from "./pages/PocketBase/PBGamingAdmin"
 
 function App() {
 
@@ -114,12 +115,13 @@ function App() {
         ]
       },
       {
-        path: "/admin", 
+        // path: "/admin", 
         element: <AdminLayout />, 
         // errorElement: <PageNotFound />,
         // outlet filen
         children: [
-          { element: <HomeAdmin /> }
+          { path: "/admin", element: <HomeAdmin /> },
+          { path: "/pbgamingadmin", element: <PBGamingAdmin /> }
         ]
       }
     ]

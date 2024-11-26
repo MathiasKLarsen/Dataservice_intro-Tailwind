@@ -1,24 +1,23 @@
 import { NavLink } from 'react-router-dom'
-import { useState } from 'react'
-import { RxHamburgerMenu } from "react-icons/rx";
-import './Navbar.css'
 
 const AdminNavbar = () => {
 
-    const [showMenu, setShowMenu] = useState(false);
-
   return (
-    <nav className='relative text-white bg-slate-600'>
-        <div className='container'>
-            <div className="flex items-center justify-between py-4">
-                <div className='px-2'>DataService A/S</div>
-                <menu className={`absolute top-0 flex-col md:flex-row md:h-auto md:flex md:flex-0 md:static h-screen md:p-0 p-10 ${ showMenu === true ? "left-0" : "-left-full" } transition-all duration-500 md:bg-transparent bg-emerald-900`}>
-                    <li className='mx-4 my-5'>
-                        <NavLink to ="/">Forsiden</NavLink>
-                    </li>
-                </menu>
-            </div>
+    <nav className='w-1/4 h-screen min-h-screen p-6 text-white bg-slate-600'>
+        <div className="mb-6">
+            <a className='text-xl font-bold'>DataService A/S</a>
         </div>
+        <menu className="space-y-4 menu menu-vertical">
+            <li>
+                <NavLink to ="admin" className="px-4 py-2 text-white rounded hover:bg-gray-700">ADMIN Home</NavLink>
+            </li>
+            <li>
+                <NavLink to ="/pbgamingadmin" className="px-4 py-2 text-white rounded hover:bg-gray-700">Administrer Gaming (pb)</NavLink>
+            </li>
+            <li>
+                <NavLink to ="/" className="px-4 py-2 text-white rounded hover:bg-gray-700">Forsiden (public)</NavLink>
+            </li>
+        </menu>
     </nav>
   )
 }
